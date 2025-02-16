@@ -14,7 +14,7 @@
     <link href="https://fonts.bunny.net/css?family=Nunito" rel="stylesheet">
 
     <!-- Scripts (+CSS) -->
-    @vite(['resources/sass/app.scss', 'resources/js/app.js', 'resouces/css/custom_app.css'])
+    @vite(['resources/sass/app.scss', 'resources/js/app.js', 'resources/css/custom_app.css'])
 </head>
 <body>
     <div id="app">

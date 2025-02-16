@@ -2,3 +2,11 @@
     background-color: #001f3f;
     color: #fff;
 }
+
+.hover-zoom {
+    transition: transform .2s;
+}
+
+.hover-zoom:hover {
+    transform: scale(1.05);
+}
