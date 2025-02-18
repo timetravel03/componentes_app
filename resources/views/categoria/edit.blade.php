@@ -10,7 +10,7 @@
             <div class="col-md-12">
 
                 <div class="card card-default">
-                    <div class="card-header">
+                    <div class="card-header bg-dark text-white">
                         <span class="card-title">{{ __('Update') }} Categoria</span>
                     </div>
                     <div class="card-body bg-white">

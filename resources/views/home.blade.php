@@ -2,6 +2,7 @@
 
 @section('content')
 <div class="container">
+    @if(Auth::check())
     <div class="row justify-content-center">
         <div class="col-md-8">
             <a href="{{route('componentes.index')}}" class="text-decoration-none">
@@ -39,5 +40,6 @@
             </a>
         </div>
     </div>
+    @endif
 </div>
 @endsection

@@ -15,6 +15,17 @@
 
     <!-- Scripts (+CSS) -->
     @vite(['resources/sass/app.scss', 'resources/js/app.js', 'resources/css/custom_app.css'])
+
+    <style>
+        body {
+            background-image: url('{{ asset("images/circuit.png") }}');
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            background-attachment: fixed;
+            min-height: 100vh;
+        }
+    </style>
 </head>
 <body>
     <div id="app">
@@ -28,20 +39,13 @@
                 </button>
 
                 <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                    <!-- Left Side Of Navbar -->
-                    @if(Auth::check())
-                    <ul class="navbar-nav me-auto">
-                        <li class="nav-item">
-                            <a class="nav-link" href="{{route('componentes.index')}}">{{__('Componentes')}}</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="{{route('categorias.index')}}">{{__('Categorias')}}</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="{{route('estados.index')}}">{{__('Estados')}}</a>
-                        </li>
+                    <ul class="navbar-nav">
+                        @if(Auth::check())
+                            <li class="nav-item">
+                                <a class="nav-link" href="{{route('home')}}">Inicio</a>
+                            </li>
+                        @endif
                     </ul>
-                    @endif
                     <!-- Right Side Of Navbar -->
                     <ul class="navbar-nav ms-auto">
                         <!-- Authentication Links -->

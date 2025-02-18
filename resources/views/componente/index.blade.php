@@ -9,13 +9,13 @@ Componentes
     <div class="row">
         <div class="col-sm-12">
             <div class="card">
-                <div class="card-header">
+                <div class="card-header bg-dark text-white">
                     <div style="display: flex; justify-content: space-between; align-items: center;">
 
                         <span id="card_title">
                             {{ __('Componentes') }}
                         </span>
-
+                        <!-- Alrededor del botón de crear nuevo -->
                         <div class="float-right">
                             {{-- No te deja añadir nuevo componente si no hay categorias o estados --}}
                             @if($categorias->isNotEmpty() && $estados->isNotEmpty())
@@ -52,9 +52,11 @@ Componentes
                                 @foreach ($componentes as $componente)
                                 <tr>
                                     <td>{{ ++$i }}</td>
-
+                                    
                                     <td>{{ $componente->modelo }}</td>
+                                    {{-- indentifica la categoria que le corresponde al id --}}
                                     <td>{{ $categorias->firstWhere('id', $componente->categoria_producto)->categoria }}</td>
+                                    {{-- indentifica el estado que le corresponde al id --}}
                                     <td>{{ $estados->firstWhere('id', $componente->estado_producto)->estado }}</td>
 
                                     <td>

@@ -19,8 +19,8 @@ class ComponenteController extends Controller
     public function index(Request $request): View
     {
         $componentes = Componente::paginate();
-
-        // TODO añadir control de errores si no hay estados o categorias
+        // Query a ambas tablas para hacer corresponder los ID's 
+        // con los nombres en la vista de índice
         $categorias = Categoria::all();
         $estados = Estado::all();
 
@@ -34,8 +34,8 @@ class ComponenteController extends Controller
     public function create(): View
     {
         $componente = new Componente();
-
-        // TODO añadir control de errores si no hay estados o categorias
+        // Aquí las querys se realizan con otro propósito, para incluir todas 
+        // las posibles opciones en un select en el fomulario de creación
         $categorias = Categoria::all();
         $estados = Estado::all();
 
@@ -59,6 +59,8 @@ class ComponenteController extends Controller
     public function show($id): View
     {
         $componente = Componente::find($id);
+        // Aquí se hacen tambien para identificar los estados y componentes, 
+        // pero como ya tenemos el id pues usamos find() para identificar solo los necesarios
         $estado = Estado::find($componente->estado_producto);
         $categoria = Categoria::find($componente->categoria_producto);
 
@@ -71,8 +73,7 @@ class ComponenteController extends Controller
     public function edit($id): View
     {
         $componente = Componente::find($id);
-
-        // TODO añadir control de errores si no hay estados o categorias
+        // Misma razón que para el create(), para los selects del formulario
         $categorias = Categoria::all();
         $estados = Estado::all();
 
