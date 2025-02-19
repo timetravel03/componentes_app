@@ -8,7 +8,7 @@
         </div>
 
         <div class="form-group mb-2 mb20">
-            <label for="categoria_producto" class="form-label">{{ __('Categoría') }}</label>
+            <label for="categoria_producto" class="form-label">{{ __('Categoria') }}</label>
             <select name="categoria_producto" class="form-control @error('categoria_producto') is-invalid @enderror" id="categoria_producto">
                 @foreach($categorias as $categoria)
                 <option value="{{ $categoria->id }}" {{ old('categoria_producto', $componente?->categoria_producto) == $categoria->id ? 'selected' : '' }}>
