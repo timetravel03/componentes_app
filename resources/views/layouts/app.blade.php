@@ -18,7 +18,7 @@
 
     <style>
         body {
-            background-image: url('{{ asset("images/circuit.png") }}');
+            background-image: url('{{ asset("images/circuit.jpeg") }}');
             background-size: cover;
             background-position: center;
             background-repeat: no-repeat;
@@ -32,6 +32,7 @@
         <nav class="navbar navbar-expand-md navbar-dark bg-dark shadow-sm">
             <div class="container">
                 <a class="navbar-brand" href="{{ url('/') }}">
+                    <img src="{{ asset("images/stock2.png") }}" alt="Logo" width="30" height="24" class="d-inline-block align-text-top">
                     {{ config('app.name', 'Laravel') }}
                 </a>
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="{{ __('Toggle navigation') }}">

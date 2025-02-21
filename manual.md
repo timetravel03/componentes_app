@@ -2,6 +2,8 @@
 
 Esta aplicación fue generada usando Laravel Crud Generator, a continuación comentaré los cambios más importantes que he realizado al comportamiento por defecto.
 
+[Repositorio de github](https://github.com/timetravel03/componentes_app)
+
 La aplicación se basa en una estructura de **tres tablas**:
 - **Componentes** (Información sobre los componentes, con dos campos relacionales ligados a las otra dos tablas mediante ID’s)
 - **Categorías** (Tipos de componentes)
@@ -147,12 +149,13 @@ Copié el aspecto de *home.blade.php*, pero solo incluí el logo de la compañí
 @extends('layouts.app')
 
 @section('content')
+@extends('layouts.app')
+
+@section('content')
 <div class="container">
     <div class="row justify-content-center">
-        <div class="col-sm-6 text-center bg-dark rounded shadow-lg p-3 mb-4">
-            <p class="display-4 text-white mb-0" style="font-weight: 300; letter-spacing: 2px;">
-                GESTIÓN DE STOCK
-            </p>
+        <div class="col-sm-6 text-center">
+            <img src="{{ asset("images/stock.png") }}" alt="" class="img-fluid">
         </div>
     </div>
     <div class="row justify-content-center">
@@ -162,6 +165,7 @@ Copié el aspecto de *home.blade.php*, pero solo incluí el logo de la compañí
     </div>
 </div>
 @endsection
+
 ```
 
 #### ***home.blade.php***
